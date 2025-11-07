@@ -1,6 +1,18 @@
 
 import { Edit, NumberInput, SimpleForm, TextInput } from 'react-admin';
-import { DataTable, List } from 'react-admin';
+import { DataTable, List, Create } from 'react-admin';
+
+export const PublisherCreate = () => (
+    <Create>
+       <SimpleForm>
+            <NumberInput source="PUB_ID" />
+            <TextInput source="id" />
+            <TextInput source="PUB_NAME" />
+            <TextInput source="PUB_TELNUM" />
+            <TextInput source="PUB_ADDRESS" />
+        </SimpleForm>
+    </Create>
+)
 
 export const PublisherEdit = () => (
     <Edit>

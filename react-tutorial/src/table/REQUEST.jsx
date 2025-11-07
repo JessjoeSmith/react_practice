@@ -1,5 +1,18 @@
 import { DataTable, DateField, List } from 'react-admin';
-import { DateInput, Edit, NumberInput, SimpleForm, TextInput } from 'react-admin';
+import { DateInput, Edit, NumberInput, SimpleForm, TextInput, Create } from 'react-admin';
+
+export const RequestCreate = () => (
+    <Create>
+        <SimpleForm>
+            <NumberInput source="REQ_NUM" />
+            <TextInput source="id" />
+            <DateInput source="REQ_DATE" />
+            <DateInput source="REQ_STARTDATE" />
+            <DateInput source="REQ_ENDDATE" />
+            <NumberInput source="STU_NUM" />
+        </SimpleForm> 
+    </Create>
+)
 
 export const RequestList = () => (
     <List>
