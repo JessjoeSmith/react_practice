@@ -1,17 +1,20 @@
-import { Admin, Resource, ListGuesser } from "react-admin";
-import{createTrailbaseProvider} from "/workspaces/react_practice/react-tutorial/ra-trailbase.js"
-//import jsonServerProvider from "ra-data-json-server";
+import { Admin, Resource, ListGuesser, EditGuesser } from "react-admin";
+import { createTrailbaseProvider } from "/workspaces/react_practice/react-tutorial/ra-trailbase.js";
 
-//const dataProvider = jsonServerProvider("https://jsonplaceholder.typicode.com");
+// Your TrailBase URL (remove trailing slash to be safe)
+const TRAILBASE_URL = "https://refactored-happiness-x59qj7xpwxv43694j-4000.app.github.dev".replace(/\/+$/, "");
 
-const TRAILBASE_URL = "https://refactored-happiness-x59qj7xpwxv43694j-4000.app.github.dev/" // enter link from Ale
-const {dataProvider, authProvider} = await createTrailbaseProvider(TRAILBASE_URL);
-
+// Vite supports top-level await, so this is valid
+const { dataProvider, authProvider } = await createTrailbaseProvider(TRAILBASE_URL);
 
 const App = () => (
-  <Admin dataProvider={dataProvider}>
-    <Resource name="posts" list={ListGuesser} />
-    <Resource name="comments" list={ListGuesser} />
+  <Admin dataProvider={dataProvider} >
+    {/* Names must match your TrailBase Record API names exactly */}
+    <Resource name="BOOK" list={ListGuesser} edit={EditGuesser}/>
+    <Resource name="PUBLISHER" list={ListGuesser} edit={EditGuesser}/>
+    <Resource name="STUDENT" list={ListGuesser} edit={EditGuesser}/>
+    <Resource name="ORDERS" list={ListGuesser} edit={EditGuesser}/>
+    <Resource name="REQUEST" list={ListGuesser} edit={EditGuesser}/>
   </Admin>
 );
 
