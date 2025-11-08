@@ -5,7 +5,7 @@ export const StudentCreate = () => (
     <Create>
         <SimpleForm>
             <NumberInput source="STU_NUM" />
-            <NumberInput source="id" />
+            {/*<NumberInput source="id" />*/}
             <TextInput source="STU_NAME" />
             <TextInput source="STU_LNAME" />
             <TextInput source="STU_TELNUM" />
@@ -17,12 +17,12 @@ export const StudentCreate = () => (
 export const StudentList = () => (
     <List>
         <DataTable>
-            <DataTable.NumberCol source="STU_NUM" />
-            <DataTable.NumberCol source="id" />
-            <DataTable.Col source="STU_NAME" />
-            <DataTable.Col source="STU_LNAME" />
-            <DataTable.Col source="STU_TELNUM" />
-            <DataTable.Col source="STU_ADDRESS" />
+            <DataTable.NumberCol source="STU_NUM" label = "Student Number"/>
+            {/*<DataTable.NumberCol source="id" />*/}
+            <DataTable.Col source="STU_NAME" label = "Name"/>
+            <DataTable.Col source="STU_LNAME" label = " Last Name"/>
+            <DataTable.Col source="STU_TELNUM" label ="Phone Number"/>
+            <DataTable.Col source="STU_ADDRESS" label = "Address"/>
         </DataTable>
     </List>
 );
@@ -32,7 +32,7 @@ export const StudentEdit = () => (
     <Edit>
         <SimpleForm>
             <NumberInput source="STU_NUM" />
-            <NumberInput source="id" />
+            {/*<NumberInput source="id" />*/}
             <TextInput source="STU_NAME" />
             <TextInput source="STU_LNAME" />
             <TextInput source="STU_TELNUM" />

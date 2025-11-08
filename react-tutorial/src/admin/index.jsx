@@ -1,4 +1,4 @@
-import { Admin, Resource } from "react-admin";
+import { Admin, radiantDarkTheme, Resource} from "react-admin";
 import { createTrailbaseProvider } from "/workspaces/react_practice/react-tutorial/ra-trailbase.js";
 
 import { BookList, BookEdit, BookCreate } from "../table/BOOK";
@@ -17,7 +17,7 @@ const TRAILBASE_URL = "https://refactored-happiness-x59qj7xpwxv43694j-4000.app.g
 const { dataProvider, authProvider } = await createTrailbaseProvider(TRAILBASE_URL);
 
 const App = () => (
-  <Admin dataProvider={dataProvider} authProvider={authProvider}>
+  <Admin dataProvider={dataProvider} authProvider={authProvider} theme={radiantDarkTheme}>
     {/* Names must match your TrailBase Record API names exactly */}
     <Resource name="BOOK" list={BookList} edit={BookEdit} create={BookCreate} />
     <Resource name="PUBLISHER" list={PublisherList} edit={PublisherEdit} create={PublisherCreate}/>

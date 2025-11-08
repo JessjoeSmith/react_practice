@@ -5,7 +5,7 @@ export const RequestCreate = () => (
     <Create>
         <SimpleForm>
             <NumberInput source="REQ_NUM" />
-            <TextInput source="id" />
+            {/*<TextInput source="id" />*/}
             <DateInput source="REQ_DATE" />
             <DateInput source="REQ_STARTDATE" />
             <DateInput source="REQ_ENDDATE" />
@@ -18,7 +18,7 @@ export const RequestList = () => (
     <List>
         <DataTable>
             <DataTable.NumberCol source="REQ_NUM" />
-            <DataTable.Col source="id" />
+            {/*<DataTable.Col source="id" />*/}
             <DataTable.Col source="REQ_DATE">
                 <DateField source="REQ_DATE" />
             </DataTable.Col>
@@ -39,7 +39,7 @@ export const RequestEdit = () => (
     <Edit>
         <SimpleForm>
             <NumberInput source="REQ_NUM" />
-            <TextInput source="id" />
+            {/*<TextInput source="id" />*/}
             <DateInput source="REQ_DATE" />
             <DateInput source="REQ_STARTDATE" />
             <DateInput source="REQ_ENDDATE" />
