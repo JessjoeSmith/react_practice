@@ -2,6 +2,22 @@
 import { DataTable, DateField, List, Create } from 'react-admin';
 import { DateInput, Edit, NumberInput, SimpleForm, TextInput } from 'react-admin';
 
+import { NumberField, Show, SimpleShowLayout, TextField } from 'react-admin';
+
+export const BookShow = () => (
+    <Show>
+        <SimpleShowLayout>
+            <NumberField source="BOOK_ISBN" />
+            <TextField source="id" />
+            <DateField source="BOOK_DATE" />
+            <TextField source="BOOK_NAME" />
+            <NumberField source="BOOK_EDITION" />
+            <TextField source="BOOK_STATUS" />
+            <NumberField source="PUB_ID" />
+        </SimpleShowLayout>
+    </Show>
+);
+
  export const BookCreate =() => (
     <Create>
         <SimpleForm>

@@ -2,6 +2,20 @@
 import { Edit, SimpleForm, TextInput } from 'react-admin';
 import { DataTable, List, Create } from 'react-admin';
 
+import { NumberField, Show, SimpleShowLayout, TextField } from 'react-admin';
+
+export const PublisherShow = () => (
+    <Show>
+        <SimpleShowLayout>
+            <NumberField source="PUB_ID" />
+            <TextField source="id" />
+            <TextField source="PUB_NAME" />
+            <TextField source="PUB_TELNUM" />
+            <TextField source="PUB_ADDRESS" />
+        </SimpleShowLayout>
+    </Show>
+);
+
 export const PublisherCreate = () => (
     <Create>
        <SimpleForm>

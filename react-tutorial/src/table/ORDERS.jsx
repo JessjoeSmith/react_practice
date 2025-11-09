@@ -1,6 +1,20 @@
 import { DataTable, DateField, List, Create } from 'react-admin';
 import { DateInput, Edit, NumberInput, SimpleForm, TextInput } from 'react-admin';
 
+import { DateField, NumberField, Show, SimpleShowLayout, TextField } from 'react-admin';
+
+export const OrderShow = () => (
+    <Show>
+        <SimpleShowLayout>
+            <NumberField source="ORD_NUM" />
+            <TextField source="id" />
+            <DateField source="ORD_DATE" />
+            <NumberField source="ORD_QUANTITY" />
+            <NumberField source="BOOK_ISBN" />
+        </SimpleShowLayout>
+    </Show>
+);
+
 export const OrderCreate = () => (
     <Create>
         <SimpleForm>
